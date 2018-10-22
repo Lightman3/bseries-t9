@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @series.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @series.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @series.image_url %>
+</p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= @series.ranking %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @series.category %>
+</p>
+
+<%= link_to 'Back', series_index_path %>

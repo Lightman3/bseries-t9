@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Series</h1>
+<div class="series-list">
+  <% @series.each do |serie| %>
+    <div class="serie-container">
+      <div class="serie-title"><%= serie.title %></div>
+      <div class="serie-image"><img src="<%= serie.image_url %>" alt=""></div>
+      <div class="serie-description"><%= serie.description %></div>
+      <div class="serie-link-container"><%= link_to 'Más información', serie, class: 'serie-link' %></div>
+    </div>
+  <% end %>
+</div>

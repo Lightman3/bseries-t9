@@ -1,0 +1,27 @@
+.series-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.serie-container {
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #ffcc99;
+}
+
+.serie-title {
+  font-size: 20px;
+  padding: 15px 20px;
+  margin: -20px -20px 15px -20px;
+  background: #ffcc99;
+}
+.serie-link-container {
+  text-align: right;
+}
+.serie-link {
+  color: #d16f42;
+  text-decoration: none;
+}
+.serie-link:hover {
+  text-decoration: underline;
+}
+

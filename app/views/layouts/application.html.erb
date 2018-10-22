@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Bseries</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +11,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="main-header">
+      <div class="main-logo"></div>
+      <nav class="main-menu">
+        <a href="#" class="main-menu-item">Categorías</a>
+        <a href="#" class="main-menu-item">Top 100</a>
+        <a href="#" class="main-menu-item">Ingresar</a>
+      </nav>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="main-footer">
+      <p class="main-footer-p">BSeries 2018 &copy; No hay derechos reservados</p>
+    </footer>
   </body>
 </html>
