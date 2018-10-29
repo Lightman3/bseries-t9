@@ -1,10 +1,10 @@
-<%= form_with(model: series, local: true) do |form| %>
-  <% if series.errors.any? %>
+<%= form_with(model: tv_show, local: true) do |form| %>
+  <% if tv_show.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(series.errors.count, "error") %> prohibited this series from being saved:</h2>
+      <h2><%= pluralize(tv_show.errors.count, "error") %> prohibited this tv_show from being saved:</h2>
 
       <ul>
-      <% series.errors.full_messages.each do |message| %>
+      <% tv_show.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :category %>
+    <%= form.text_field :category %>
   </div>
 
   <div class="field">
@@ -32,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
 
   <div class="actions">

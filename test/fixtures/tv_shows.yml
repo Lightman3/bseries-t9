@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: series
+# Table name: tv_shows
 #
 #  id          :integer          not null, primary key
 #  category    :string
@@ -13,23 +13,23 @@
 #
 # Indexes
 #
-#  index_series_on_category  (category)
-#  index_series_on_ranking   (ranking)
-#  index_series_on_title     (title)
+#  index_tv_shows_on_category  (category)
+#  index_tv_shows_on_ranking   (ranking)
+#  index_tv_shows_on_title     (title)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  category: MyString
   description: MyText
   image_url: MyString
   ranking: 1.5
-  category: MyString
+  title: MyString
 
 two:
-  title: MyString
+  category: MyString
   description: MyText
   image_url: MyString
   ranking: 1.5
-  category: MyString
+  title: MyString

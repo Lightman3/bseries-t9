@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Series</h1>
+<div class="tv-shows-list">
+  <% @tv_shows.each do |tv_show| %>
+    <div class="tv-show-container">
+      <div class="tv-show-title"><%= tv_show.title %></div>
+      <div class="tv-show-image"><img src="<%= tv_show.image_url %>" alt=""></div>
+      <div class="tv-show-description"><%= tv_show.description %></div>
+      <div class="tv-show-link-container"><%= link_to 'Más información', tv_show, class: 'tv-show-link' %></div>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to 'New Tv Show', new_tv_show_path %>

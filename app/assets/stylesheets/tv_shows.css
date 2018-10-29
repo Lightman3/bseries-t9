@@ -1,27 +1,27 @@
-.series-list {
+.tv-shows-list {
   display: flex;
   flex-wrap: wrap;
 }
-.serie-container {
+.tv-show-container {
   padding: 20px;
   margin-bottom: 10px;
   border: 2px solid #ffcc99;
 }
 
-.serie-title {
+.tv-show-title {
   font-size: 20px;
   padding: 15px 20px;
   margin: -20px -20px 15px -20px;
   background: #ffcc99;
 }
-.serie-link-container {
+.tv-show-link-container {
   text-align: right;
 }
-.serie-link {
+.tv-show-link {
   color: #d16f42;
   text-decoration: none;
 }
-.serie-link:hover {
+.tv-show-link:hover {
   text-decoration: underline;
 }
 
