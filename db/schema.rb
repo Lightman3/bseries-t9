@@ -12,19 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_10_29_002203) do
 
-  create_table "series", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "image_url"
-    t.float "ranking"
-    t.string "category"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category"], name: "index_series_on_category"
-    t.index ["ranking"], name: "index_series_on_ranking"
-    t.index ["title"], name: "index_series_on_title"
-  end
-
   create_table "tv_shows", force: :cascade do |t|
     t.string "title"
     t.text "description"
