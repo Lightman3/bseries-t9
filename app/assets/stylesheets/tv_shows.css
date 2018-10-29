@@ -1,3 +1,4 @@
+/* estilos del index */
 .tv-shows-list {
   display: flex;
   flex-wrap: wrap;
@@ -25,3 +26,81 @@
   text-decoration: underline;
 }
 
+/* estilos del show */
+
+.tv-show_ranking {
+  color: #d16f42;
+  font-weight: 700;
+  font-size: 120%;
+}
+
+.tv-show_image-container {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQoU2NkwALWrl37H12YcSgoxObw4OBgDLczDgGFABw8IynNNpnpAAAAAElFTkSuQmCC") repeat;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.tv-show_description {
+  border-left: 3px solid #d16f42;
+  padding-left: 15px;
+  font-style: italic;
+}
+.tv-show_tags {
+  margin: 20px 0;
+}
+.tv-show_tags_tag {
+  display: inline-block;
+  font-size: 12px;
+  background: #d16f42;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+/* estilos del formulario */
+.field {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+.actions {
+  margin-top: 15px;
+  border-top: 1px solid #666;
+  padding-top: 5px;
+}
+
+button, a {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  margin-top: 5px;
+  padding: 8px 15px;
+  border: 1px solid #666;
+  background: #20c3ff;
+}
+button:hover, a:hover {
+  border: 1px solid #b37ab5;
+  background: #abf3ff;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  width: 100%;
+}
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 8px;
+  text-align: center;
+}
+
+.tv-show-edit_description {
+  width: 100%;
+  height: 160px;
+}

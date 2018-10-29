@@ -24,29 +24,52 @@ h2 {
   background: #d16f42;
   height: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 /* logo del sitio */
 .main-logo {
   width: 71px;
   height: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   background: url('/imgs/logo.png');
 }
 /* menu principal */
 .main-menu {
-  margin-left: 20px;
+  display: none;
 }
-/* elementos del menu principal */
-.main-menu-item {
-  display: inline-block;
-  line-height: 20px;
-  padding: 10px 19px;
-  color: #ddd;
-  text-decoration: none;
+.main-menu-ham {
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 4px 8px;
+  background: url("/imgs/h_icon.png") 50% 50% no-repeat;
+  align-self: flex-end;
 }
-.main-menu-item:hover {
-  color: #fff;
-  background: #853b32;
+
+@media(min-width: 768px) {
+  .main-header {
+    justify-content: center;
+  }
+  .main-menu-ham {
+    display: none;
+  }
+  .main-menu {
+    margin-left: 20px;
+    display: block;
+  }
+  /* elementos del menu principal */
+  .main-menu-item {
+    display: inline-block;
+    line-height: 20px;
+    padding: 10px 19px;
+    color: #ddd;
+    text-decoration: none;
+  }
+  .main-menu-item:hover {
+    color: #fff;
+    background: #853b32;
+  }
 }
 
 .main-footer {
@@ -57,6 +80,7 @@ h2 {
 
 .container {
   width: 100%;
+  box-sizing: border-box;
   background: #fff;
   margin: 0 auto;
   padding: 10px 15px;

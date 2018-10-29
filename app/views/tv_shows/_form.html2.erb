@@ -13,34 +13,36 @@
 
 
   <div class="field">
-    <label for="tv_show_category">Categoría</label>
+    <label for="tv_show_category">Category</label>
     <input type="text" value="anime" name="tv_show[category]" id="tv_show_category">
   </div>
 
   <div class="field">
-    <label for="tv_show_title">Título</label>
-    <input type="text" value="<%=tv_show.title %>" name="tv_show[title]" id="tv_show_title">
+    <label for="tv_show_description">Description</label>
+    <textarea name="tv_show[description]" id="tv_show_description"><%=tv_show.description %></textarea>
   </div>
 
   <div class="field">
-    <label for="tv_show_description">Descripción</label>
-    <textarea name="tv_show[description]" id="tv_show_description" class="tv-show-edit_description"><%=tv_show.description %></textarea>
-  </div>
-
-  <div class="field">
-    <label for="tv_show_image_url">URL de imagen</label>
+    <label for="tv_show_image_url">Image url</label>
     <input type="text" value="<%=tv_show.image_url %>" name="tv_show[image_url]" id="tv_show_image_url">
   </div>
 
   <div class="field">
     <label for="tv_show_ranking">Ranking</label>
-    <input type="text" value="<%=tv_show.ranking %>" name="tv_show[ranking]" id="tv_show_ranking" class="tv-show-edit_ranking">
+    <input type="text" value="<%=tv_show.ranking %>" name="tv_show[ranking]" id="tv_show_ranking">
   </div>
 
+  <div class="field">
+    <label for="tv_show_title">Title</label>
+    <input type="text" value="<%=tv_show.title %>" name="tv_show[title]" id="tv_show_title">
+  </div>
 
   <div class="actions">
-    <button type="submit">Actualizar</button>
-    <%= link_to 'Volver', tv_shows_path %>
+    <button type="submit">Update Tv show</button>
   </div>
 
 <% end %>
+
+
+<%= link_to 'Show', @tv_show %> |
+<%= link_to 'Back', tv_shows_path %>
