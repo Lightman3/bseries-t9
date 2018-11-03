@@ -1,0 +1,83 @@
+#devise_sessions_new {
+  width: 100%;
+  margin: 0 auto;
+}
+@media(min-width: 768px) {
+  #devise_sessions_new {
+    width: 320px;
+  }
+}
+
+#devise_sessions_new h1 {
+  text-align: center;
+}
+
+#devise_sessions_new .field {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#devise_sessions_new label {
+  display: block;
+  width: 25%;
+  text-align: right;
+}
+#devise_sessions_new .field.remember_me {
+  justify-content: center;
+}
+#devise_sessions_new .remember_me label {
+  width: 120px;
+}
+#devise_sessions_new input[type=text],
+#devise_sessions_new input[type=email],
+#devise_sessions_new input[type=password],
+#devise_sessions_new input[type=submit]
+{
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  padding: 5px 8px;
+  font-size: 16px;
+  line-height: 20px;
+  border: 2px solid #1d89b7;
+}
+#devise_sessions_new input.error {
+  border-color: #b90264;
+}
+#devise_sessions_new .error_message{
+  margin-top: 5px;
+  width: 100%;
+  text-align: center;
+  color: #b90264;
+}
+#devise_sessions_new .error_message.hide{
+  display: none;
+}
+#devise_sessions_new .actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#devise_sessions_new input[type=submit] {
+  width: 100%;
+  margin: 0;
+  padding: 8px 15px;
+  border: 2px solid #666;
+  background: #20c3ff;
+}
+#devise_sessions_new input[type=submit]:hover {
+  border-color: #b37ab5;
+  background: #abf3ff;
+  cursor: pointer;
+}
+
+.devise-links {
+  display: flex;
+  justify-content: center;
+}
+.devise-links a {
+  margin: 0 15px;
+  display: block;
+}

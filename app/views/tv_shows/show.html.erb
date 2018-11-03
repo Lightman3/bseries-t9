@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div id="tv_shows_show">
+  <h1><%= @tv_show.title %> <span class="tv-show_ranking"><%= @tv_show.ranking %></span> </h1>
 
-<h1><%= @tv_show.title %> <span class="tv-show_ranking"><%= @tv_show.ranking %></span> </h1>
+  <div class="tv-show_image-container">
+    <img src="<%= @tv_show.image_url %>" alt="">
+  </div>
 
-<div class="tv-show_image-container">
-  <img src="<%= @tv_show.image_url %>" alt="">
+  <div class="tv-show_description">
+    <%= @tv_show.description %>
+  </div>
+
+  <div class="tv-show_tags">
+    <div class="tv-show_tags_tag"><%= @tv_show.category %></div>
+  </div>
+
+
+  <%= link_to 'Edit', edit_tv_show_path(@tv_show) %> |
+  <%= link_to 'Back', tv_shows_path %>
 </div>
-
-<div class="tv-show_description">
-  <%= @tv_show.description %>
-</div>
-
-<div class="tv-show_tags">
-  <div class="tv-show_tags_tag"><%= @tv_show.category %></div>
-</div>
-
-
-<%= link_to 'Edit', edit_tv_show_path(@tv_show) %> |
-<%= link_to 'Back', tv_shows_path %>

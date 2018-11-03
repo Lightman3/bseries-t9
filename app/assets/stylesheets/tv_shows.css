@@ -1,54 +1,54 @@
 /* estilos del index */
-.tv-shows-list {
+#tv_shows_index .tv-shows-list {
   display: flex;
   flex-wrap: wrap;
 }
-.tv-show-container {
+#tv_shows_index .tv-show-container {
   padding: 20px;
   margin-bottom: 10px;
   border: 2px solid #ffcc99;
 }
 
-.tv-show-title {
+#tv_shows_index .tv-show-title {
   font-size: 20px;
   padding: 15px 20px;
   margin: -20px -20px 15px -20px;
   background: #ffcc99;
 }
-.tv-show-link-container {
+#tv_shows_index .tv-show-link-container {
   text-align: right;
 }
-.tv-show-link {
+#tv_shows_index .tv-show-link {
   color: #d16f42;
   text-decoration: none;
 }
-.tv-show-link:hover {
+#tv_shows_index .tv-show-link:hover {
   text-decoration: underline;
 }
 
 /* estilos del show */
 
-.tv-show_ranking {
+#tv_shows_show .tv-show_ranking {
   color: #d16f42;
   font-weight: 700;
   font-size: 120%;
 }
 
-.tv-show_image-container {
+#tv_shows_show .tv-show_image-container {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQoU2NkwALWrl37H12YcSgoxObw4OBgDLczDgGFABw8IynNNpnpAAAAAElFTkSuQmCC") repeat;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.tv-show_description {
+#tv_shows_show .tv-show_description {
   border-left: 3px solid #d16f42;
   padding-left: 15px;
   font-style: italic;
 }
-.tv-show_tags {
+#tv_shows_show .tv-show_tags {
   margin: 20px 0;
 }
-.tv-show_tags_tag {
+#tv_shows_show .tv-show_tags_tag {
   display: inline-block;
   font-size: 12px;
   background: #d16f42;
@@ -59,19 +59,18 @@
 
 /* estilos del formulario */
 
-.field {
+#tv_shows_form .field {
   display: block;
   margin: 20px 0;
   text-align: center;
 }
-.actions {
+#tv_shows_form .actions {
   margin-top: 15px;
   border-top: 1px solid #666;
   padding-top: 5px;
 }
 
-
-.btn {
+#tv_shows_form .btn {
   display: block;
   box-sizing: border-box;
   text-align: center;
@@ -84,18 +83,18 @@
   border: 1px solid #666;
   background: #20c3ff;
 }
-.btn:hover {
+#tv_shows_form .btn:hover {
   border: 1px solid #b37ab5;
   background: #abf3ff;
   cursor: pointer;
 }
 
 
-label {
+#tv_shows_form label {
   display: block;
   width: 100%;
 }
-input {
+#tv_shows_form input {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -103,7 +102,7 @@ input {
   text-align: center;
 }
 
-.tv-show-edit_description {
+#tv_shows_form .tv-show-edit_description {
   box-sizing: border-box;
   width: 100%;
   height: 160px;
