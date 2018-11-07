@@ -65,3 +65,5 @@ gem 'annotate'
 gem 'jquery-rails'
 
 gem 'devise'
+
+gem 'react-rails'

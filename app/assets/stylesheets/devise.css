@@ -1,39 +1,59 @@
-#devise_sessions_new {
+.login-page {
   width: 100%;
   margin: 0 auto;
 }
 @media(min-width: 768px) {
-  #devise_sessions_new {
+  .login-page {
     width: 320px;
   }
 }
 
-#devise_sessions_new h1 {
+.login-page h1 {
   text-align: center;
 }
+.login-page .sending {
+  padding: 12px 16px;
+  margin: 15px 0;
+  border: 1px solid #20c3ff;
+  background: #d8f8ff;
+}
+.login-page .reset-btn {
+  display: block;
+  padding: 8px 15px;
+  margin: 5px 0;
+  border: 2px solid #666;
+  background: #20c3ff;
+  color: #000;
+  text-align: center;
+}
+.login-page .reset-btn:hover {
+  border-color: #b37ab5;
+  background: #abf3ff;
+  cursor: pointer;
+}
 
-#devise_sessions_new .field {
+.login-page .field {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 30px;
 }
-#devise_sessions_new label {
+.login-page label {
   display: block;
   width: 25%;
   text-align: right;
 }
-#devise_sessions_new .field.remember_me {
+.login-page .field.remember_me {
   justify-content: center;
 }
-#devise_sessions_new .remember_me label {
+.login-page .remember_me label {
   width: 120px;
 }
-#devise_sessions_new input[type=text],
-#devise_sessions_new input[type=email],
-#devise_sessions_new input[type=password],
-#devise_sessions_new input[type=submit]
+.login-page input[type=text],
+.login-page input[type=email],
+.login-page input[type=password],
+.login-page input[type=submit]
 {
   box-sizing: border-box;
   display: block;
@@ -43,31 +63,31 @@
   line-height: 20px;
   border: 2px solid #1d89b7;
 }
-#devise_sessions_new input.error {
+.login-page input.error {
   border-color: #b90264;
 }
-#devise_sessions_new .error_message{
+.login-page .error_message{
   margin-top: 5px;
   width: 100%;
   text-align: center;
   color: #b90264;
 }
-#devise_sessions_new .error_message.hide{
+.login-page .error_message.hide{
   display: none;
 }
-#devise_sessions_new .actions {
+.login-page .actions {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
-#devise_sessions_new input[type=submit] {
+.login-page input[type=submit] {
   width: 100%;
   margin: 0;
   padding: 8px 15px;
   border: 2px solid #666;
   background: #20c3ff;
 }
-#devise_sessions_new input[type=submit]:hover {
+.login-page input[type=submit]:hover {
   border-color: #b37ab5;
   background: #abf3ff;
   cursor: pointer;
