@@ -15,7 +15,8 @@
 
     <div class="field">
       <label for="tv_show_category">Categoría</label>
-      <input type="text" value="anime" name="tv_show[category]" id="tv_show_category">
+      <input type="text" value="<%=tv_show.category %>" name="tv_show[category]" id="tv_show_category" class="autocomplete">
+      <div class="options"></div>
     </div>
 
     <div class="field">

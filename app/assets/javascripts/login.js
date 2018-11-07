@@ -37,7 +37,7 @@ function deviseLoginPageLoadedHandler(){
       var passwordErrorMessageElement = document.getElementById('password_error_message');
 
       console.log("verificando valor en campo de clave:", passwordField.value);
-      /* si no hay clave, desplegar mensaje como "Debes ingresar una contraseña" */
+      // si no hay clave, desplegar mensaje como "Debes ingresar una contraseña"
 
 
       if (! passwordField.value) {
