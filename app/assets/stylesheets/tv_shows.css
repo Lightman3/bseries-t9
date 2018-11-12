@@ -4,9 +4,15 @@
   flex-wrap: wrap;
 }
 #tv_shows_index .tv-show-container {
+  box-sizing: border-box;
   padding: 20px;
   margin-bottom: 10px;
   border: 2px solid #ffcc99;
+  margin: 0 7px 10px 7px;
+  width: calc(50% - 14px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #tv_shows_index .tv-show-title {
@@ -14,9 +20,36 @@
   padding: 15px 20px;
   margin: -20px -20px 15px -20px;
   background: #ffcc99;
+  display: flex;
+  justify-content: space-between;
+}
+#tv_shows_index .tv-show-ranking {
+  color: #d16f42;
+  font-weight: 700;
+  font-size: 120%;
+}
+#tv_shows_index .tv-show-image {
+  text-align: center;
+}
+#tv_shows_index .tv-show-description {
+  margin: 15px 0;
+  cursor: pointer;
+}
+#tv_shows_index .tv-show-description.closed {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #tv_shows_index .tv-show-link-container {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+#tv_shows_index .tv-show-tag {
+  font-size: 12px;
+  background: #d16f42;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 4px;
 }
 #tv_shows_index .tv-show-link {
   color: #d16f42;
@@ -35,10 +68,12 @@
 }
 
 #tv_shows_show .tv-show_image-container {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQoU2NkwALWrl37H12YcSgoxObw4OBgDLczDgGFABw8IynNNpnpAAAAAElFTkSuQmCC") repeat;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+#tv_shows_show .transparent-bg {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQoU2NkwALWrl37H12YcSgoxObw4OBgDLczDgGFABw8IynNNpnpAAAAAElFTkSuQmCC") repeat;
 }
 #tv_shows_show .tv-show_description {
   border-left: 3px solid #d16f42;

@@ -6,34 +6,7 @@ class CategoriesController < ApplicationController
 
     key = "#{params[:key]}"
 
-    known_categories = [
-      'animación',
-      'aventura',
-      'ciencia ficción',
-      'comedia',
-      'comer',
-      'cosplay',
-      'documental',
-      'docu-reality',
-      'drama',
-      'drama coreano',
-      'drama japonés',
-      'drama médico',
-      'drama sobrenatural',
-      'histórico',
-      'intriga',
-      'musical',
-      'roma',
-      'romance',
-      'suspenso',
-      'terror',
-      'vaqueros',
-      'violencia',
-    ]
-
-    categories = (known_categories.select{|k| k.start_with?(key) } +
-      TvShow.where('category LIKE ?',"#{key}%").distinct.pluck(:category))
-      .uniq.sort_by(&:to_s)
+    categories = TvShow.where('category LIKE ?',"#{key}%").order('category ASC').distinct.pluck(:category)
 
     render json: categories
 

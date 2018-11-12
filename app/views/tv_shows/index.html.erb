@@ -3,10 +3,16 @@
   <div class="tv-shows-list">
     <% @tv_shows.each do |tv_show| %>
       <div class="tv-show-container">
-        <div class="tv-show-title"><%= tv_show.title %></div>
+        <div class="tv-show-title">
+          <%= tv_show.title %>
+          <span class="tv-show-ranking"><%= tv_show.ranking %></span>
+        </div>
         <div class="tv-show-image"><img src="<%= tv_show.image_url %>" alt=""></div>
-        <div class="tv-show-description"><%= tv_show.description %></div>
-        <div class="tv-show-link-container"><%= link_to 'Más información', tv_show, class: 'tv-show-link' %></div>
+        <div class="tv-show-description closed"><%= tv_show.description %></div>
+        <div class="tv-show-link-container">
+          <div class="tv-show-tag"><%= tv_show.category %></div>
+          <%= link_to 'Más información', tv_show, class: 'tv-show-link' %>
+        </div>
       </div>
     <% end %>
   </div>

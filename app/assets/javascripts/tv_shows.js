@@ -16,21 +16,24 @@ $(function(){
     };
 
     // al usar el campo de autocomplete...
-    autocomplete.on('focus keyup',function(){
+    autocomplete.on('keyup',function(){
 
       // si hay al menos 1 letra
       if (autocomplete.val().length >= 1) {
         console.log('buscando que hay para '+autocomplete.val());
+
+        showOptions(['sarana','serene','sirini']);
+
+        // 4b
+
         $.ajax({
           url: '/categories',
           data: {'key': autocomplete.val()},
           dataType: 'json',
-          success: function(data, textStatus, jqXHR){
-            showOptions(data);
-          }
+          success: showOptions
         });
       } else {
-        // si no, ocultamos las opciones pues no son validas
+        // 3c - si no hay nada en el campo de texto, ocultamos las opciones pues no son validas
         optionsContainer.addClass('hide');
       }
 
@@ -40,6 +43,7 @@ $(function(){
     // cuando el campo pierde el foco, ocultamos
     autocomplete.on('blur',function(){
       window.setTimeout(function(){
+        // 3b - ocultamos las opciones cuando el usuario hace clic en cualquier parte fuera del campo o de las opciones
         optionsContainer.addClass('hide');
       },200);
     });
@@ -48,6 +52,7 @@ $(function(){
     optionsContainer.on('click','.option',function(ev){
       var clickedOption = $(ev.target);
       autocomplete.val( clickedOption.text() );
+      // 3a - aqui ocultamos las opciones luego que el usuario hizo clic en una
       optionsContainer.addClass('hide');
     });
 
