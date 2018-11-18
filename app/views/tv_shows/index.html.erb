@@ -10,7 +10,7 @@
         <div class="tv-show-image"><img src="<%= tv_show.image_url %>" alt=""></div>
         <div class="tv-show-description closed"><%= tv_show.description %></div>
         <div class="tv-show-link-container">
-          <div class="tv-show-tag"><%= tv_show.category %></div>
+          <div class="tv-show-tag"><%= link_to tv_show.category.name, tv_show.category %></div>
           <%= link_to 'Más información', tv_show, class: 'tv-show-link' %>
         </div>
       </div>

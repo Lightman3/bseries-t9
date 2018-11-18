@@ -1,0 +1,7 @@
+<h2><%= @category.name %></h2>
+
+<ul>
+  <% @category.tv_shows.each do |tv_show| %>
+    <li><%= tv_show.title %></li>
+  <% end %>
+</ul>

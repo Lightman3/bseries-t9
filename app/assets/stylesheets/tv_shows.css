@@ -51,6 +51,10 @@
   padding: 3px 7px;
   border-radius: 4px;
 }
+#tv_shows_index .tv-show-tag a {
+  color: #fff;
+  cursor: pointer;
+}
 #tv_shows_index .tv-show-link {
   color: #d16f42;
   text-decoration: none;
@@ -90,6 +94,10 @@
   color: #fff;
   padding: 3px 7px;
   border-radius: 4px;
+}
+#tv_shows_show .tv-show_tags_tag a {
+  color: #fff;
+  cursor: pointer;
 }
 
 /* estilos del formulario */

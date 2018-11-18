@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get 'categories' => 'categories#search'
+  resources :categories do
+
+    get 'search' => 'categories#search'
+  end
 
   devise_scope :user do
     get 'users/sign_in2', to: 'users/sessions#new2'

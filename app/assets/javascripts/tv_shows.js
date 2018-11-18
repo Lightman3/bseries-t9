@@ -27,7 +27,7 @@ $(function(){
         // 4b
 
         $.ajax({
-          url: '/categories',
+          url: '/categories/search',
           data: {'key': autocomplete.val()},
           dataType: 'json',
           success: showOptions

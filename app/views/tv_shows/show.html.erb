@@ -10,7 +10,7 @@
   </div>
 
   <div class="tv-show_tags">
-    <div class="tv-show_tags_tag"><%= @tv_show.category %></div>
+    <div class="tv-show_tags_tag"><%= link_to @tv_show.category.name, @tv_show.category %></div>
   </div>
 
 
