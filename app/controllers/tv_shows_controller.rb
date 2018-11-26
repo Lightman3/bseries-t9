@@ -1,5 +1,5 @@
 class TvShowsController < ApplicationController
-  before_action :set_tv_show, only: [:show, :edit, :update, :destroy]
+  before_action :set_tv_show, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /tv_shows
   # GET /tv_shows.json
@@ -58,6 +58,21 @@ class TvShowsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tv_shows_url, notice: 'Tv show was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def vote
+    user_evaluation = params[:ranking_vote][:evaluation]
+    ranking_vote = @tv_show.ranking_votes.create(
+      email: nil,
+      ip: request.ip,
+      evaluation: user_evaluation
+    )
+    if ranking_vote.persisted?
+      session["votes_#{@tv_show.id}"] = user_evaluation
+      redirect_to tv_show_url(@tv_show), notice: 'Votacion almacenada'
+    else
+      render 'show', alert: 'Error al almacenar tu voto. Favor reintenta.'
     end
   end
 

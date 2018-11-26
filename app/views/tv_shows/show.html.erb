@@ -9,9 +9,26 @@
     <%= @tv_show.description %>
   </div>
 
-  <div class="tv-show_tags">
-    <div class="tv-show_tags_tag"><%= link_to @tv_show.category.name, @tv_show.category %></div>
+
+  <div class="tv-show-vote">
+    <% if has_vote_for?(@tv_show) %>
+      Tu votación por esta serie fue <strong><%= vote_for(@tv_show) %></strong>
+    <% else %>
+    <!-- Ejercicio 2: este es el código que permite al usuario enviar un voto -->
+      <%= form_with(model: RankingVote.new, url: vote_tv_show_path(@tv_show), local: true) do |f| %>
+        <%= f.label :evaluation, 'Ingresa tu voto' %>
+        <%= f.number_field :evaluation, min: 0, max: 10, autocomplete: false %>
+        <%= f.submit 'Votar' %>
+      <% end %>
+    <!-- fin -->
+    <% end %>
+
   </div>
+
+  <div class="tv-show_tags">
+    <div class="tv-show_tags_tag <%= 'promoted' if @tv_show.category.promoted? %>"><%= link_to @tv_show.category.name, @tv_show.category %></div>
+  </div>
+
 
 
   <%= link_to 'Edit', edit_tv_show_path(@tv_show) %> |

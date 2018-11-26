@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'tv_shows#index'
   resources :tv_shows do
+    post 'vote', on: :member
   end
 
   devise_for :users

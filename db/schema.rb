@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_18_201857) do
+ActiveRecord::Schema.define(version: 2018_11_26_023945) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -18,16 +18,26 @@ ActiveRecord::Schema.define(version: 2018_11_18_201857) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "ranking_votes", force: :cascade do |t|
+    t.integer "tv_show_id"
+    t.string "email"
+    t.string "ip"
+    t.integer "evaluation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tv_show_id"], name: "index_ranking_votes_on_tv_show_id"
+  end
+
   create_table "tv_shows", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "image_url"
-    t.float "ranking"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
+    t.float "category"
+    t.index ["category"], name: "index_tv_shows_on_category"
     t.index ["category_id"], name: "index_tv_shows_on_category_id"
-    t.index ["ranking"], name: "index_tv_shows_on_ranking"
     t.index ["title"], name: "index_tv_shows_on_title"
   end
 

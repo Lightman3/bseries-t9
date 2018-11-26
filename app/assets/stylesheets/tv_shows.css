@@ -51,6 +51,14 @@
   padding: 3px 7px;
   border-radius: 4px;
 }
+#tv_shows_index .tv-show-tag.promoted {
+  background: #000;
+  font-size: 14px;
+  border-radius: 6px;
+}
+#tv_shows_index .tv-show-tag.promoted a {
+  line-height: 20px;
+}
 #tv_shows_index .tv-show-tag a {
   color: #fff;
   cursor: pointer;
@@ -95,12 +103,25 @@
   padding: 3px 7px;
   border-radius: 4px;
 }
+#tv_shows_show .tv-show_tags_tag.promoted {
+  background: #000;
+  font-size: 14px;
+  border-radius: 6px;
+}
+#tv_shows_show .tv-show_tags_tag.promoted a {
+  line-height: 20px;
+}
 #tv_shows_show .tv-show_tags_tag a {
   color: #fff;
   cursor: pointer;
 }
 
-/* estilos del formulario */
+#tv_shows_show .tv-show-vote {
+  margin-top: 15px;
+}
+
+
+  /* estilos del formulario */
 
 #tv_shows_form .field {
   display: block;

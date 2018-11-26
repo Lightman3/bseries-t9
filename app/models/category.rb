@@ -12,4 +12,8 @@ class Category < ApplicationRecord
 
   has_many :tv_shows
 
+  def promoted?
+    ['comedia','aventura','musical'].include?(name)
+  end
+
 end
