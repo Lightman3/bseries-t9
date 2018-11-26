@@ -3,7 +3,7 @@ class RemoveOldCategory < ActiveRecord::Migration[5.2]
     remove_column :tv_shows, :category
   end
   def down
-    add_column :tv_shows, :ranking, :string, after: 'image_url'
-    add_index :tv_shows, :ranking
+    add_column :tv_shows, :category, :float, after: 'ranking'
+    add_index :tv_shows, :category
   end
 end
