@@ -1,0 +1,16 @@
+.categories-title {
+  text-align: center;
+  color: blue;
+
+}
+.category-link {
+  display: block;
+  border: 1px solid blue;
+  margin-top: 5px;
+  padding: 15px 10px;
+  color: blue;
+}
+.category-link:hover {
+  background: blue;
+  color: white;
+}
