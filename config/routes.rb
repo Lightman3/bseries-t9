@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :collections
   root 'tv_shows#index'
   resources :tv_shows do
     post 'vote', on: :member
