@@ -1,0 +1,25 @@
+.field input,
+.field select,
+.field textarea {
+  box-sizing: border-box;
+  width: 500px;
+  height: 40px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 3px;
+}
+.field textarea {
+  height: 180px;
+}
+.collection__serie a {
+  color: #1d89b7;
+}
+.collection__serie a:visited {
+  color: #1d89b7;
+}
+.collection__serie a:hover {
+  background: transparent;
+}
+.not-so-large-image {
+  max-height: 50px;
+}

@@ -10,12 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_023945) do
+ActiveRecord::Schema.define(version: 2018_12_09_185240) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "collections", force: :cascade do |t|
+    t.integer "tv_show_id"
+    t.string "name"
+    t.string "image_url"
+    t.text "description"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tv_show_id"], name: "index_collections_on_tv_show_id"
   end
 
   create_table "ranking_votes", force: :cascade do |t|
