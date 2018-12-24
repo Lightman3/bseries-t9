@@ -1,0 +1,44 @@
+.field input{
+  box-sizing: border-box;
+  width: 250px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 3px;
+}
+
+.field select{
+  box-sizing: border-box;
+  width: 250px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 3px;
+}
+
+.field textarea{
+  box-sizing: border-box;
+  width: 250px;
+  height: 180px;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 3px;
+}
+
+
+.collection_serie a{
+  color: #1d89b7;
+}
+
+.collection_serie a:visited{
+  color: #1d89b7;
+}
+
+.collection_serie a:hover{
+  color: #1d89b7;
+  background-color: transparent;
+}
+
+.size_image{
+  max-height: 60px;
+}

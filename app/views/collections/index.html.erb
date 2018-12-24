@@ -1,0 +1,21 @@
+<div id="collections_index">
+  <h1>Tienda</h1>
+  
+  
+  <% @collections.each do |collection| %>
+    <div class="collection">
+      <h2 class="collection_name"><%= collection.name %></h2>
+      <div class="collection_serie">
+        Serie: <%= link_to collection.tv_show.title , collection.tv_show %>
+      </div>
+      <div class="collection_image"><img class="size_image" src="<%= collection.image_url %>" alt=""></div>
+      <div class="collection_price"><%= number_to_currency collection.price, delimiter: ".", precision: 0 %></div>
+    </div>
+  <% end %>
+
+  
+<br>
+
+<%= link_to 'Agregar Producto', new_collection_path %>
+
+</div>
